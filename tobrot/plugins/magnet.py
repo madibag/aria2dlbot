@@ -17,7 +17,9 @@ async def magnet_link_s(client, message):
             name = r[num]['name']
             size = r[num]['size']
             magnet = r[num]['magnet']
-            await message.reply_text(str(name)+'\n'str(size)+'\n'str(magnet))
+            await message.reply_text("""{}
+                                         {}
+                                         {}""".format(name,size,magnet))
             num+=1
     else:
         pass
