@@ -12,6 +12,6 @@ async def magnet_link_s(client, message):
     await message.reply_text("Searching Magnet...", quote=True)
     r = requests.get(base_url+str(search)).json()
     for num in r:
-        message.reply_text(r[num]['name'])
-        message.reply_text(r[num]['magnet'])
-        message.reply_text(r[num]['size'])
+        message.reply_text(num['name'])
+        message.reply_text(num['magnet'])
+        message.reply_text(num['size'])
