@@ -5,7 +5,7 @@ base_url = 'https://sjprojectsapi.herokuapp.com/torrent/?query='
 
 
 async def magnet_link_s(client, message):
-    search = message.text
+    search = message.message.text
     search = search.split(' ')
     search.remove('/Magnet')
     str1 = ""
