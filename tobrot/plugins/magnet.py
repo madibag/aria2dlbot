@@ -10,14 +10,14 @@ async def magnet_link_s(client, message):
     search = search.split(' ')
     if len(search) > 1:
         search.remove('/Magnet')
-        await message.reply_text("Searching Magnet...", quote=True)
+        await message.reply_text("Searching Magnet..."+search, quote=True)
         r = requests.get(base_url+str(search)).json()
         num = 0
         while num < 10:
             name = r[num]['name']
             size = r[num]['size']
             magnet = r[num]['magnet']
-            await message.reply_text(name+'\n'size+'\n'magnet)
+            await message.reply_text(str(name)+'\n'str(size)+'\n'str(magnet))
             num+=1
     else:
         pass
