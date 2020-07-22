@@ -108,12 +108,6 @@ if __name__ == "__main__" :
     )
     app.add_handler(help_text_handler)
     #
-    start_message_handler = MessageHandler(
-        start_message_f,
-        filters=Filters.command(["start"]) 
-    )
-    app.add_handler = MessageHandler(start_message_handler)
-    #
     #
     call_back_button_handler = CallbackQueryHandler(
         button
