@@ -9,11 +9,8 @@ async def magnet_link_s(client, message):
     print(search)
     search = search.split(' ')
     search.remove('/Magnet')
-    str1 = ""
-    for ele in search:  
-        str1 += ele
     await message.reply_text("Searching Magnet...", quote=True)
-    r = requests.get(base_url+str1).json()
+    r = requests.get(base_url+str(search)).json()
     for num in r:
         message.reply_text(r[num]['name'])
         message.reply_text(r[num]['magnet'])
