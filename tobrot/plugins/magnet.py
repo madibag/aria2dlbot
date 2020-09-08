@@ -31,7 +31,7 @@ async def magnet_link_s(client, message):
             magnet = r[num]['magnet']
             await message.reply_text("""{}
                                         {}
-                                        <a href='http://'+{}>Magnet</a>""".format(name,size,magnet))
+                                        <code>{}</code>""".format(name,size,magnet))
             num+=1
     else:
         pass
