@@ -1,6 +1,6 @@
 # Telegram Torrent Leecher 🔥🤖
 
-A Telegram Torrent (and youtube-dl) Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
+A Telegram Torrent Leecher based on [Pyrogram](https://github.com/pyrogram/pyrogram)
 
 ## installing
 
